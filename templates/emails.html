@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Create Emails - Event-Driven System</title>
+{% endblock %}
+
+{% block body %}
+    <div id="content">
+        <h1>Create Emails</h1>
+        
+        <form class="form" method="POST" action="{{url_for('routes.emailTask')}}">
+            <label for="to_email">To:</label>
+            <input type="email" id="to_email" name="to_email" required>
+
+            <label for="email_subject">Subject:</label>
+            <input type="text" id="email_subject" name="email_subject" required>
+
+            <label for="email_body">Email Body:</label>
+            <textarea id="email_body" name="email_body" required></textarea>
+
+            <label for="attachment">Attachment:</label>
+            <input type="file" id="attachment" name="attachment">
+
+            <button type="submit">Send Email</button>
+        </form>
+    </div>
+{% endblock %}

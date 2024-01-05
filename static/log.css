@@ -1,0 +1,75 @@
+:root {
+    --spaceblack: #333334;
+    --smokewhite: #ddd;
+    --orange: orange;
+    --grey: #555;
+}
+
+body {
+    background-color: var(--spaceblack);
+    color: var(--orange);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#forms-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: var(--spaceblack);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form h1 {
+    color: var(--orange);
+    margin-bottom: 20px;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: var(--orange);
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid var(--smokewhite);
+    background-color: var(--smokewhite);
+    color: var(--grey);
+}
+
+.switch {
+    background-color: var(--spaceblack);
+    color: var(--orange);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+.switch:hover {
+    background-color: var(--spaceblack);
+    color: var(--smokewhite);
+}
+
+.active-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

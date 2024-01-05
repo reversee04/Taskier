@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <!-- Add any additional head content as needed -->
+  <style>
+    /* Add styles for the table if necessary */
+    
+  </style>
+{% endblock %}
+
+{% block body %}
+  <div class="task-cards-container">
+    {% for task in tasks %}
+      <div class="task-card">
+        <h2>{{ task.title }}</h2>
+        <p>{{ task.description }}</p>
+      </div>
+    {% endfor %}
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for task in tasks %}
+        <tr>
+          <td>{{ task.title }}</td>
+          <td>{{ task.description }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

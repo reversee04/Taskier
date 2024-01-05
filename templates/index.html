@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  
+{% endblock %}
+
+{% block body %}
+  <div class="task-cards-container">
+    {% for task in tasks %}
+      <div class="task-card">
+        <h2>{{ task.title }}</h2>
+        <p>{{ task.description }}</p>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

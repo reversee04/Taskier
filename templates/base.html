@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Driven System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div id="navbar">
+        {% if current_user.is_authenticated %}
+        <div id="profile">
+            <a href="#">
+                <img src="{{ url_for('static', filename='img/image1.jfif') }}" alt="Profile Icon">
+                <span>{{ current_user.username}}</span>
+            </a>
+        </div>
+        {% endif %}
+        <a href="/">HOME</a>
+        <a href="/tasks.html">TASKS</a>
+        <a href="/addtasks.html">ADD TASKS</a>
+        
+    </div>
+    <button id="menu-btn">
+        <span class="material-icons-outlined">menu</span>
+    </button>
+    {% block body %}{% endblock %}
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
